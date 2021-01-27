@@ -13,4 +13,4 @@ Logger
 https://github.com/Mano-el-Mano/Rabbitmq-logger
 
 
-====
+***
