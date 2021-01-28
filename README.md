@@ -51,5 +51,5 @@ One way to achieve this is to use the `direct` or `topic` type of exchange. Usin
 
 We have also used BPMN to create a single business rule for our reviews. 
 
-<img src="./Camunda.jpg">
+<img src="./Camunda.png">
 
