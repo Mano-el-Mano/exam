@@ -20,7 +20,7 @@ This is our Exam Project addressing the Car-Rental shop made by Kristoffer and J
 Customer requirements:
 
 ```
-Here at Kristoffer's Cadillac service business is bomming! 
+Here at our Cadillac service business is bomming! 
 We want to replace our legacy car rental system we a newer and more scalable application, so we can start renting out more cars. 
 We have a hard time orchestrating car reservations, customer reviews, business process and logging in our legacy system. It is an older system built with a Cobol mainframe. 
 
