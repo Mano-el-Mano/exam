@@ -53,3 +53,12 @@ We have also used BPMN to create a single business rule for our reviews.
 
 <img src="./Camunda.png">
 
+We have created a business rule here to share positive reviews with stakeholders. We have an `is review postive` gateway (XOR) in our BPMN model that derterminates if a `reviewScore` is above 8, if that is the case the Camunda modeller will create a new task for sharing the review on social media. Otherwsie the flow will end.
+
+We can use BPM (Business Process Managment) to increase effectiveness and optimize internal and external business processes. We used the BPMN (Business Process Model and Notation) tool Camunda to achieve this purpose. Camunda provides an interface to viusalize a business process, and add different components and events to control the flow of the business process. Because it provides us with a graphical representation for specyfing business processes it provides transparency for both developers, stakeholders and business analysts. 
+
+We have implemented the logic by using the Camunda REST API, to deploy and complete tasks. 
+
+If a `review task` is completed with a score over 8, it will add another task to share the rating with the stakeholders. This way we keep Camunda as a single source of truth for the tasks, that needs to be created for the specific business purpose. 
+
+
