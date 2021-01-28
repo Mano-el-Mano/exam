@@ -41,7 +41,6 @@ Below is an illustration of the architechture, that we have chosen for our appli
 
 <img src="./SI_Diagram.jpg">
 
-
 All functionality is exposed through a proxy service written in Nest.js. This provides a single entrypoint for all external clients, that wants to interact with our system. Alternatively we could have used a tool like an API Gateway or an ALB (Application Load Balancer) through a cloud hosting service like AWS. For scalability purposes this would also have some advantages in terms of making the application scalable. 
 
 The proxy server is also responsible for creating logs to our Python Logging server. This is done using the AMQP protocol using RabbitMQ as the messaging protocol which is an asyncrhonous protocol in contrast to HTTP or RMI, which by default is a synchronous protocol. This makes our logging service more scalable as requests can come in form multiple services and systems without blocking the entire service/system. For this implementation we have used a single exchange of the type `fanout` with a single queue named `logs`. The fanout exchange type means, that the exchange sends a message to all the queue's that it knows about. 
@@ -51,3 +50,6 @@ We could alternatively have added multiple consumers to consumer different logs 
 One way to achieve this is to use the `direct` or `topic` type of exchange. Using the direct type we could have a `binding key` for each of our queues and then send each message with a `routing key` to match specific messages to specific queues. This would be preferable in a scenario where we also used RabbitMQ for other purposes than logging, but based on the scope of this project we have decided to use a single fanout exchange.
 
 We have also used BPMN to create a single business rule for our reviews. 
+
+<img src="./Camunda.jpg">
+
