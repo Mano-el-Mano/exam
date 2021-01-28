@@ -50,4 +50,4 @@ We could alternatively have added multiple consumers to consumer different logs 
 
 One way to achieve this is to use the `direct` or `topic` type of exchange. Using the direct type we could have a `binding key` for each of our queues and then send each message with a `routing key` to match specific messages to specific queues. This would be preferable in a scenario where we also used RabbitMQ for other purposes than logging, but based on the scope of this project we have decided to use a single fanout exchange.
 
-
+We have also used BPMN to create a single business rule for our reviews. 
